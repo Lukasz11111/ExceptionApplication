@@ -12,7 +12,7 @@ public class Controller {
     String show(){
             final String uri = "http://localhost:8080/error";
             RestTemplate restTemplate = new RestTemplate();
-        for (int i =0 ;i<25;i++){
+        for (int i =0 ;i<5;i++){
             try {
                 String result = restTemplate.getForObject(uri, String.class);
             }catch (Exception e){
@@ -25,6 +25,13 @@ public class Controller {
     String showError(){
         int alfa=0;
         int beta = 4/alfa;
+        return "";
+    }
+
+    @GetMapping("/errorTwo")
+    String showError2(){
+        int alfa=0;
+        int beta = 12/alfa;
         return "";
     }
 }
